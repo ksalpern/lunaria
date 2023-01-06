@@ -10,6 +10,10 @@
 :root {
   --bg: #000000;
   --whiteText: #ffffff;
+  --yellow: #ffc810;
+  --blue: #107eff;
+  --darkBlue: #0d123b;
+  --red: #460d23;
 }
 
 body {
@@ -56,29 +60,37 @@ p {
 }
 
 .header {
+  margin-top: 23px;
   background: var(--bg);
   position: fixed;
   padding: 39px 0px;
-  width: 100%;
-  max-width: 1900px;
+  width: calc(350px + 1570 * (100vw - 360px) / 1545);
+  max-width: 1920px;
   background: rgba(255, 0, 0, 0.178);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .header .container {
+  border-top: 1px solid var(--whiteText);
   border-bottom: 1px solid var(--whiteText);
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 .header .container::after {
   content: "";
   position: absolute;
+  z-index: -1;
   top: -878px;
   left: 1221px;
-  background-color: #107eff;
+  background-color: var(--blue);
   width: 890px;
   height: 1015px;
   opacity: 0.5;
@@ -91,9 +103,10 @@ p {
 .header .container::before {
   content: "";
   position: absolute;
+  z-index: -1;
   top: -687px;
   left: 1508px;
-  background-color: #ffc810;
+  background-color: var(--yellow);
   width: 865px;
   height: 875px;
   opacity: 0.5;
@@ -102,6 +115,36 @@ p {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+.header nav {
+  padding: 0 110px;
+  position: absolute;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.header a,
+.header a:visited {
+  color: #0d86ff;
+  font-size: 20px;
+}
+.header a span,
+.header a:visited span {
+  color: rgb(252, 206, 14);
+}
+.header .logo {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }
 
 .main {
