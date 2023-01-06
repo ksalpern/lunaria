@@ -17,21 +17,44 @@
 body {
   background: var(--bg);
   color: var(--whiteText);
+  font-family: 'proxima_nova', serif;
 }
-.wrapper{
+
+.wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1900px;
 }
+
 .container {
   width: 100%;
   max-width: 1843px;
   padding: 0 15px;
 }
 
-h1{
+h1 {
   font-size: 70px;
-  font-family:  'proxima_nova', serif;
+}
+
+h2 {
+  font-size: 65px;
+}
+
+h3 {
+  font-size: 60px;
+}
+
+h4 {
+  font-family: 'Marcellus', serif;
+  font-size: 40px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 24px;
 }
 
 // ===============================/general style=======================================
@@ -39,38 +62,64 @@ h1{
 .header {
   background: var(--bg);
   position: fixed;
-  padding: 39px 107px;
+  padding: 39px 0px;
   width: 100%;
   max-width: 1900px;
-  background: red;
+  background: rgba(255, 0, 0, 0.178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 
   .container {
+    border-bottom: 1px solid var(--whiteText);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
     &::after {
       content: '';
       position: absolute;
-      border-radius: 60% 40% 54% 46%/51% 30% 70% 49%;
-      top: 0px;
-      left: 0px;
+      top: -878px;
+      left: 1221px;
       background-color: #107eff;
       width: 890px;
       height: 1015px;
       opacity: 0.5;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
     }
 
     &::before {
       content: '';
       position: absolute;
-      border-radius: 60% 40% 54% 46%/51% 30% 70% 49%;
-      top: 0px;
-      right: 0px;
+      top: -687px;
+      left: 1508px;
       background-color: #ffc810;
       width: 865px;
       height: 875px;
       opacity: 0.5;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
     }
   }
 
 }
 
 // ===============================/header=======================================
+// ================================main=======================================
+.main {
+  margin-top: 104px;
+}
+
+// ===============================/main=======================================
+// ================================footer=======================================
+
+// ===============================/footer=======================================
