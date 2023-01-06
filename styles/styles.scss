@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Marcellus:regular);
+
+@font-face {
+  font-family: 'proxima_nova';
+  src: url('../fonts/Proxima Nova Font.eot');
+  src: local('☺'), url('../fonts/Proxima Nova Font.woff') format('woff'), url('../fonts/Proxima Nova Font.ttf') format('truetype'), url('../fonts/Proxima Nova Font.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg: #000000;
+  --whiteText: #ffffff;
+}
+
+// ===============================general style=======================================
+body {
+  background: var(--bg);
+  color: var(--whiteText);
+}
+.wrapper{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1900px;
+}
+.container {
+  width: 100%;
+  max-width: 1843px;
+  padding: 0 15px;
+}
+
+h1{
+  font-size: 70px;
+  font-family:  'proxima_nova', serif;
+}
+
+// ===============================/general style=======================================
+// ================================header=======================================
+.header {
+  background: var(--bg);
+  position: fixed;
+  padding: 39px 107px;
+  width: 100%;
+  max-width: 1900px;
+  background: red;
+
+
+  .container {
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: 60% 40% 54% 46%/51% 30% 70% 49%;
+      top: 0px;
+      left: 0px;
+      background-color: #107eff;
+      width: 890px;
+      height: 1015px;
+      opacity: 0.5;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 60% 40% 54% 46%/51% 30% 70% 49%;
+      top: 0px;
+      right: 0px;
+      background-color: #ffc810;
+      width: 865px;
+      height: 875px;
+      opacity: 0.5;
+    }
+  }
+
+}
+
+// ===============================/header=======================================
