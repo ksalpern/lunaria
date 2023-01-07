@@ -192,7 +192,7 @@ p {
     .blue {
       position: absolute;
       z-index: -1;
-      top: -878px;
+      top: -940px;
       right: -15%;
       background-color: var(--blue);
       width: 890px;
@@ -208,11 +208,11 @@ p {
     .yellow {
       position: absolute;
       z-index: -1;
-      top: -687px;
+      top: -910px;
       right: -33%;
       background-color: var(--yellow);
       width: 865px;
-      height: 875px;
+      height: 1040px;
       opacity: 0.5;
       border-radius: 50%;
       -webkit-border-radius: 50%;
@@ -411,7 +411,8 @@ p {
 // ===============================/header=======================================
 // ================================main=======================================
 .main {
-  margin-top: 504px;
+  margin-top: 204px;
+  // min-height: 100vh;
 }
 
 .banner {
@@ -432,19 +433,22 @@ p {
   }
 
   &__links {
-    position: -webkit-sticky;
-    position: sticky;
+    // position: -webkit-sticky;
+    // position: sticky;
     background-color: yellow;
-    top: 0;
+    // top: 45px;
     display: flex;
     justify-content: end;
-    z-index: 2;
-    padding: 43px;
-    height: 50px;
+    // z-index: 2;
+    // padding: 43px;
+    // height: 50px;
   }
 }
 
 // ===============================/main=======================================
 // ================================footer=======================================
-
+.footer{
+  // min-height: 100vh;
+  background: rgb(66, 7, 7)
+}
 // ===============================/footer=======================================

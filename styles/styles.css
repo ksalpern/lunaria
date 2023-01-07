@@ -144,7 +144,7 @@ p {
 .header .container .blue {
   position: absolute;
   z-index: -1;
-  top: -878px;
+  top: -940px;
   right: -15%;
   background-color: var(--blue);
   width: 890px;
@@ -159,11 +159,11 @@ p {
 .header .container .yellow {
   position: absolute;
   z-index: -1;
-  top: -687px;
+  top: -910px;
   right: -33%;
   background-color: var(--yellow);
   width: 865px;
-  height: 875px;
+  height: 1040px;
   opacity: 0.5;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -327,7 +327,7 @@ p {
 }
 
 .main {
-  margin-top: 504px;
+  margin-top: 204px;
 }
 
 .banner {
@@ -345,13 +345,11 @@ p {
   color: var(--whiteText);
 }
 .banner__links {
-  position: -webkit-sticky;
-  position: sticky;
   background-color: yellow;
-  top: 0;
   display: flex;
   justify-content: end;
-  z-index: 2;
-  padding: 43px;
-  height: 50px;
+}
+
+.footer {
+  background: rgb(66, 7, 7);
 }/*# sourceMappingURL=styles.css.map */
