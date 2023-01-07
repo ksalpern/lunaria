@@ -25,6 +25,7 @@
 }
 
 #cursor {
+  z-index: 100;
   pointer-events: none;
   height: 100px;
   width: 100px;
@@ -90,6 +91,7 @@ h1 {
 
 h2 {
   font-size: 65px;
+  font-weight: 600;
 }
 
 h3 {
@@ -99,6 +101,7 @@ h3 {
 h4 {
   font-family: "Marcellus", serif;
   font-size: 40px;
+  line-height: 56px;
 }
 
 h5 {
@@ -351,5 +354,67 @@ p {
 }
 
 .footer {
-  background: rgb(66, 7, 7);
+  background: rgb(22, 35, 59);
+  padding: 157px 100px 80px var(--bigPadding);
+}
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__top h2 {
+  margin-bottom: 232px;
+}
+.footer__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: 633px;
+}
+.footer__right p {
+  line-height: 40px;
+  margin-bottom: 145px;
+}
+.footer__right h4 {
+  position: relative;
+  max-width: 444px;
+  margin-bottom: 115px;
+}
+.footer__right h4 img {
+  margin-bottom: 23px;
+}
+.footer__right .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 52px 8px;
+  max-width: 300px;
+}
+.footer__right .socials__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__right .socials__links a:hover {
+  scale: 1.2;
+}
+.footer__left {
+  width: 50%;
+}
+.footer__left .contactUs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px 8px;
+  font-size: 30px;
+}
+.footer__left .contactUs a:hover {
+  text-decoration: underline;
+}
+.footer a {
+  color: var(--whiteText);
+}
+.footer__bottom a:hover {
+  text-decoration: underline;
+}
+.footer__bottom p {
+  margin-bottom: 27px;
 }/*# sourceMappingURL=styles.css.map */
