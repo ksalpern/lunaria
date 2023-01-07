@@ -105,17 +105,3 @@ h6 {
 .main {
   flex: 1 1 auto;
 }
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #D9D9D9;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--theme);
-  border-radius: 10px;
-}

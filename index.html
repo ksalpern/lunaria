@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Lunaria</title>
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <!-- --------------------------------header------------------------------------------- -->
-      <header class="header">
-        <div class="container">
-          <nav>
-            <a href="#" class="logo">
-              <img src="assets/logo.svg" alt="">
-              <img src="assets/ui.svg" alt="">
-            </a>
-            <a href="https://war.ukraine.ua/">
-              <span>Stand </span>with Ukraine
-            </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <title>Lunaria</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- --------------------------------header------------------------------------------- -->
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <a href="#" class="logo">
+            <img src="assets/logo.svg" alt="" />
+            <img class="subLogo" src="assets/ui.svg" alt="" />
+          </a>
+          <div class="header__burger">
+            <span></span>
+          </div>
+          <nav class="header__menu">
+            <ul>
+              <li>
+                <a href="https://war.ukraine.ua/" class="header__link ukraine">Stand <span>with Ukraine</span></a>
+              </li>
+              <li>
+                <a href="#portfolio" class="header__link desktop__hidden">portfolio</a>
+              </li>
+              <li>
+                <a href="#contact" class="header__link desktop__hidden">Contact Us</a>
+              </li>
+            </ul>
           </nav>
         </div>
-      </header>
-      <!-- --------------------------------/header----------------------------------------.- -->
-      <!-- --------------------------------main--------------------------------------------- -->
-      <main class="main">
-        <div class="container">
-          <h4>
-            Lunaria is the leading IT integrator for taking your business to the
-            next level
-          </h4>
-        </div>
-      </main>
-      <!-- -------------------------------/main--------------------------------------------- -->
-      <!-- -------------------------------footer-------------------------------------------- -->
-      <footer class="footer">
-        <div class="container"></div>
-      </footer>
-      <!-- -------------------------------/footer------------------------------------------- -->
-    </div>
+      </div>
+    </header>
+    <!-- --------------------------------/header----------------------------------------.- -->
+    <!-- --------------------------------main--------------------------------------------- -->
+    <main class="main">
+      <div class="container">
+        <h4>
+          Lunaria is the leading IT integrator for taking your business to the
+          next level
+        </h4>
+      </div>
+    </main>
+    <!-- -------------------------------/main--------------------------------------------- -->
+    <!-- -------------------------------footer-------------------------------------------- -->
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
+    <!-- -------------------------------/footer------------------------------------------- -->
+  </div>
 
-    <script src="./scripts/main.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/burger.js"></script>
+</body>
+
 </html>
