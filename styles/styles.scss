@@ -28,8 +28,10 @@
   --blue: #107eff;
   --darkBlue: #0d123b;
   --red: #460d23;
-  --bigPadding: 346px;
+  --bigPadding: calc(8px + (346 - 8) * ((100vw - 320px) / (1920 - 320)));
 }
+
+
 
 // ===============================general style=======================================
 // ===============================cursor style========================================
@@ -495,7 +497,7 @@ ol li::before {
 
   .container {
     border-bottom: 1px solid #fff;
-    padding: 287px 84px 50px var(--bigPadding);
+    padding: 57px 84px 50px var(--bigPadding);
   }
 
   p {
@@ -545,19 +547,20 @@ ol li::before {
 
   .darckCircle {
     position: absolute;
-    top: -40%;
-    right: -2430px;
+    top: -60%;
+    left: calc(300px + (1400 - 300) * ((100vw - 375px) / (1920 - 375)));
     background: var(--darkBlue);
     width: 2850px;
     height: 1560px;
     border-radius: 50%;
     z-index: -1;
+    transform: rotate(-10deg);
   }
 
   .redCircle {
     position: absolute;
     top: 7%;
-    left: -880px;
+    right: calc(300px + (1720 - 300) * ((100vw - 375px) / (1920 - 375)));
     background: var(--red);
     width: 1023px;
     height: 818px;
@@ -565,11 +568,12 @@ ol li::before {
     z-index: -1;
   }
 
-  .services__title {
+  &__title {
     position: absolute;
-    top: -50px;
+    top: -54px;
     left: var(--bigPadding);
     font-weight: bold;
+    font-size: 20px;
   }
 
   &__items {
@@ -584,6 +588,7 @@ ol li::before {
       align-items: center;
       justify-content: space-between;
       padding: 84px 60px 105px var(--bigPadding);
+      gap: 16px;
 
       h3 {
         width: 50%;
@@ -598,10 +603,47 @@ ol li::before {
     }
 
     li:not(:last-child) {
-      border-bottom: 5px solid white;
+      border-bottom: 1px solid white;
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .services {
+
+    &__items {
+      li::before {
+        top: 46px;
+      }
+
+      li {
+        flex-direction: column;
+
+        h3 {
+          width: 100%;
+          font-size: 45px;
+        }
+
+        p {
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .services {
+
+    &__items {
+      li::before {
+        left: calc(8px + (50 - 8) * ((100vw - 320px) / (600 - 320)));
+      }
+    }
+  }
+}
+
 
 
 // ===============================/main=======================================
@@ -756,3 +798,22 @@ ol li::before {
 }
 
 // ===============================/footer=======================================
+@media (min-width: 1921px) {
+  :root {
+    --bigPadding: 346px;
+  }
+
+  .services {
+    position: relative;
+
+    .darckCircle {
+      left: inherit;
+      right: -2430px;
+    }
+
+    .redCircle {
+      left: -880px;
+      right: inherit;
+    }
+  }
+}
