@@ -112,6 +112,7 @@ h5 {
 
 p {
   font-size: 24px;
+  line-height: 40px;
 }
 
 .desktop__hidden {
@@ -503,11 +504,6 @@ ol li::before {
   position: relative;
   width: 125%;
   padding: 80px 15px 80px 15px;
-  transition: all 0s;
-  -webkit-transition: all 0s;
-  -moz-transition: all 0s;
-  -ms-transition: all 0s;
-  -o-transition: all 0s;
   /* Слайдер */
   /* Слайдер запущен */
   /* Слайдер с точками */
@@ -588,6 +584,95 @@ ol li::before {
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .accordion-item-body-content {
+    max-width: 100%;
+  }
+}
+.about {
+  padding: 143px 59px 134px 59px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px 8px;
+}
+.about__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__top h2 {
+  width: 50%;
+  margin-left: var(--bigPadding);
+}
+.about__details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px 8px;
+  width: 100%;
+  max-width: 633px;
+}
+.about__details button {
+  background: none;
+  color: var(--whiteText);
+  font-weight: 600;
+  font-size: 20px;
+}
+.about__details button span {
+  width: 34px;
+  height: 16px;
+  margin-left: 25px;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+}
+.about__details button span::before {
+  content: url(../assets/more.svg);
+}
+.about__details a,
+.about__details a:visited {
+  color: var(--whiteText);
+}
+.about__details button:hover span {
+  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -o-transform: translateX(20px);
+}
+.about__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.about .team__item {
+  width: 383px;
+  height: 574px;
+  position: relative;
+}
+.about .team__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #121673, transparent);
+}
+.about .persom__img {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.about .persom__img img {
+  max-width: none;
+  max-height: 100%;
+}
+.about .person__info {
+  position: absolute;
+  bottom: 59px;
+  left: -42px;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -720,5 +805,10 @@ ol li::before {
   .services .redCircle {
     left: -880px;
     right: inherit;
+  }
+}
+@media (max-width: 1024px) {
+  #cursor {
+    borde: none;
   }
 }/*# sourceMappingURL=styles.css.map */

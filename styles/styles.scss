@@ -163,6 +163,7 @@ h5 {
 
 p {
   font-size: 24px;
+  line-height: 40px;
 }
 
 .desktop__hidden {
@@ -238,6 +239,8 @@ ol li::before {
   p {
     font-size: 20px;
   }
+
+
 }
 
 // ===============================/general style=======================================
@@ -651,13 +654,8 @@ ol li::before {
   position: relative;
   width: 125%;
   padding: 80px 15px 80px 15px;
-  transition: all 0s;
-  -webkit-transition: all 0s;
-  -moz-transition: all 0s;
-  -ms-transition: all 0s;
-  -o-transition: all 0s;
 
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     left: 0;
@@ -788,6 +786,120 @@ ol li::before {
     width: 100%;
 
   }
+}
+
+
+@media (max-width: 768px) {
+  .accordion-item-body-content {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+.about {
+  padding: 143px 59px 134px 59px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px 8px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      width: 50%;
+    margin-left: var(--bigPadding);
+
+    }
+  }
+
+  &__details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px 8px;
+    width: 100%;
+    max-width: 633px;
+
+    button {
+      background: none;
+      color: var(--whiteText);
+      font-weight: 600;
+      font-size: 20px;
+
+      span {
+        width: 34px;
+        height: 16px;
+        margin-left: 25px;
+        display: inline-block;
+        transition: all .5s ease-in-out;
+      }
+
+      span::before {
+        content: url(../assets/more.svg);
+
+      }
+    }
+
+    a,
+    a:visited {
+      color: var(--whiteText);
+    }
+
+    button:hover {
+      span {
+        transform: translateX(20px);
+        -webkit-transform: translateX(20px);
+        -moz-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        -o-transform: translateX(20px);
+      }
+    }
+  }
+
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .team__item {
+    width: 383px;
+    height: 574px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(0deg, #121673, transparent);
+    }
+  }
+
+  .persom__img {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+
+    img {
+      max-width: none;
+      max-height: 100%;
+    }
+  }
+  .person__info{
+    position: absolute;
+    bottom: 59px;
+    left: -42px;
+  }
+
 }
 
 
@@ -960,5 +1072,11 @@ ol li::before {
       left: -880px;
       right: inherit;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  #cursor {
+    borde: none;
   }
 }
