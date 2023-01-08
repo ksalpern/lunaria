@@ -544,6 +544,7 @@ ol li::before {
 
 .services {
   position: relative;
+  border-bottom: 1px solid var(--whiteText);
 
   .darckCircle {
     position: absolute;
@@ -647,7 +648,25 @@ ol li::before {
 
 
 .values {
-transition: all 0s;
+  position: relative;
+  width: 125%;
+  padding: 80px 15px 80px 15px;
+  transition: all 0s;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -ms-transition: all 0s;
+  -o-transition: all 0s;
+
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1843px;
+    height: 1px;
+    background-color: var(--whiteText);
+  }
+
   /* Слайдер */
   .slick-slider {}
 
@@ -659,7 +678,7 @@ transition: all 0s;
 
   /* Ограничивающая оболочка */
   .slick-list {
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   /* Лента слайдов */
@@ -704,14 +723,13 @@ transition: all 0s;
 
   /* Элемент точки */
   .slick-dots li button {}
+
 }
 
 
 
 
-.accordion-item {
- 
-}
+.accordion-item {}
 
 .accordion-item-header {
   margin-bottom: 28px;
@@ -719,30 +737,42 @@ transition: all 0s;
   opacity: 0.5;
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  // width: 50px;
 }
 
-.accordion-item-header::after {
+.accordion-item-header::before {
   content: url(../assets/plus.svg);
-  position: absolute;
-  left: -15%;
+  position: relative;
+  // position: absolute;
+  // left: -40px;
   top: 8px;
+  width: 50px;
+  margin-right: 25px;
 }
 
-.accordion-item-header.active{
+.accordion-item-header.active {
   opacity: 1;
 }
 
-.accordion-item-header.active::after {
+.accordion-item-header.active::before {
   content: url(../assets/minus.svg);
+  position: relative;
   top: -8px;
-  left: -20%;
+  // left: -60px;
 
 }
 
 .accordion-item-body {
   max-height: 0;
   overflow: hidden;
+  padding-left: 75px;
   transition: max-height 0.2s ease-out;
+  -webkit-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
+  -ms-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
 }
 
 .accordion-item-body-content {
@@ -751,6 +781,14 @@ transition: all 0s;
   width: 100%;
 }
 
+
+
+@media (max-width: 1024px) {
+  .values {
+    width: 100%;
+
+  }
+}
 
 
 // ===============================/main=======================================

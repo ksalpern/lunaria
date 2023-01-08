@@ -424,6 +424,7 @@ ol li::before {
 
 .services {
   position: relative;
+  border-bottom: 1px solid var(--whiteText);
 }
 .services .darckCircle {
   position: absolute;
@@ -499,7 +500,14 @@ ol li::before {
   }
 }
 .values {
+  position: relative;
+  width: 125%;
+  padding: 80px 15px 80px 15px;
   transition: all 0s;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -ms-transition: all 0s;
+  -o-transition: all 0s;
   /* Слайдер */
   /* Слайдер запущен */
   /* Слайдер с точками */
@@ -518,8 +526,14 @@ ol li::before {
   /* Активная точка */
   /* Элемент точки */
 }
-.values .slick-list {
-  overflow: hidden;
+.values::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1843px;
+  height: 1px;
+  background-color: var(--whiteText);
 }
 .values .slick-track {
   display: flex;
@@ -530,29 +544,37 @@ ol li::before {
   opacity: 0.5;
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: flex-start;
 }
 
-.accordion-item-header::after {
+.accordion-item-header::before {
   content: url(../assets/plus.svg);
-  position: absolute;
-  left: -15%;
+  position: relative;
   top: 8px;
+  width: 50px;
+  margin-right: 25px;
 }
 
 .accordion-item-header.active {
   opacity: 1;
 }
 
-.accordion-item-header.active::after {
+.accordion-item-header.active::before {
   content: url(../assets/minus.svg);
+  position: relative;
   top: -8px;
-  left: -20%;
 }
 
 .accordion-item-body {
   max-height: 0;
   overflow: hidden;
+  padding-left: 75px;
   transition: max-height 0.2s ease-out;
+  -webkit-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
+  -ms-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
 }
 
 .accordion-item-body-content {
@@ -561,6 +583,11 @@ ol li::before {
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .values {
+    width: 100%;
+  }
+}
 .footer {
   display: flex;
   justify-content: center;
