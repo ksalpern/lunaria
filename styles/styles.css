@@ -23,6 +23,7 @@
   --darkBlue: #0d123b;
   --red: #460d23;
   --bigPadding: calc(8px + (346 - 8) * ((100vw - 320px) / (1920 - 320)));
+  --padding59: 59px;
 }
 
 #cursor {
@@ -151,7 +152,7 @@ ol li::before {
   justify-content: space-between;
   align-items: center;
   margin-left: var(--bigPadding);
-  gap: 20px;
+  gap: 20px 40px;
 }
 .section__header h2 {
   width: 50%;
@@ -637,7 +638,7 @@ ol li::before {
   }
 }
 .about {
-  padding: 143px 59px 134px 0px;
+  padding: 143px var(--padding59) 134px 0px;
   display: flex;
   flex-direction: column;
   gap: 80px 8px;
@@ -682,10 +683,14 @@ ol li::before {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-left: var(--padding59);
+  gap: 50px;
 }
 .about .team__item {
-  width: 383px;
-  height: 574px;
+  width: calc(280px + 103 * (100vw - 375px) / 1545);
+  max-width: 383px;
+  height: calc(350px + 224 * (100vw - 375px) / 1545);
+  max-height: 574px;
   position: relative;
 }
 .about .team__item::before {
@@ -701,15 +706,14 @@ ol li::before {
   width: 100%;
   overflow: hidden;
   height: 100%;
-}
-.about .persom__img img {
-  max-width: none;
-  max-height: 100%;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 .about .person__info {
   position: absolute;
-  bottom: 59px;
-  left: -42px;
+  bottom: var(--padding59);
+  left: -23px;
 }
 
 @media (max-width: 1024px) {
@@ -719,9 +723,17 @@ ol li::before {
     flex-direction: column;
     gap: 80px 8px;
   }
+  .about .person__info {
+    position: absolute;
+    bottom: 15px;
+    left: -23px;
+  }
+  .about__bottom {
+    padding-left: 20px;
+  }
 }
 .projects {
-  padding: 143px 59px 134px 59px;
+  padding: 143px var(--padding59) 134px var(--padding59);
   display: flex;
   flex-direction: column;
   gap: 80px 8px;
@@ -752,7 +764,7 @@ ol li::before {
 }
 .projects__top h2 {
   width: 50%;
-  margin-left: calc(var(--bigPadding) - 59px);
+  margin-left: calc(var(--bigPadding) - var(--padding59));
 }
 .projects__bottom {
   position: relative;
@@ -875,7 +887,7 @@ ol li::before {
 }
 .form {
   border-bottom: 1px solid #fff;
-  padding: 143px 59px 134px 0px;
+  padding: 143px var(--padding59) 134px 0px;
 }
 .form__top {
   display: flex;
@@ -921,10 +933,9 @@ ol li::before {
   justify-content: center;
   max-width: 1920px;
   width: 100%;
-  margin-top: 140px;
 }
 .footer .container {
-  padding: 143px 59px 134px 0px;
+  padding: 140px var(--padding59) 134px 0px;
 }
 .footer .socials {
   display: flex;
@@ -986,16 +997,12 @@ ol li::before {
 }
 .footer__info .contactUs {
   width: 50%;
+  margin-top: -100px;
 }
 
 @media (max-width: 1024px) {
-  .footer {
-    margin-top: 80px;
-  }
   .footer .container {
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 20px;
+    padding: 80px 15px 20px 15px;
   }
   .footer__bottom {
     margin-top: 80px;
@@ -1015,6 +1022,7 @@ ol li::before {
   }
   .footer__info .contactUs {
     width: 100%;
+    margin-top: 0px;
   }
   .footer__info .section__details {
     width: 100%;
@@ -1038,6 +1046,6 @@ ol li::before {
 }
 @media (max-width: 1024px) {
   #cursor {
-    borde: none;
+    border: none;
   }
 }/*# sourceMappingURL=styles.css.map */

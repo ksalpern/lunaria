@@ -29,6 +29,7 @@
   --darkBlue: #0d123b;
   --red: #460d23;
   --bigPadding: calc(8px + (346 - 8) * ((100vw - 320px) / (1920 - 320)));
+  --padding59: 59px;
 }
 
 
@@ -204,7 +205,7 @@ ol li::before {
   justify-content: space-between;
   align-items: center;
   margin-left: var(--bigPadding);
-  gap: 20px;
+  gap: 20px 40px;
 
   h2 {
     width: 50%;
@@ -867,7 +868,7 @@ ol li::before {
 
 
 .about {
-  padding: 143px 59px 134px 0px;
+  padding: 143px var(--padding59) 134px 0px;
   display: flex;
   flex-direction: column;
   gap: 80px 8px;
@@ -886,6 +887,7 @@ ol li::before {
       color: var(--whiteText);
       font-weight: 600;
       font-size: 20px;
+
 
       span {
         width: 34px;
@@ -922,11 +924,16 @@ ol li::before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-left: var(--padding59);
+    gap: 50px;
+
   }
 
   .team__item {
-    width: 383px;
-    height: 574px;
+    width: calc(280px + (383 - 280) * ((100vw - 375px) / (1920 - 375)));
+    max-width: 383px;
+    height: calc(350px + (574 - 350) * ((100vw - 375px) / (1920 - 375)));
+    max-height: 574px;
     position: relative;
 
     &::before {
@@ -944,17 +951,20 @@ ol li::before {
     width: 100%;
     overflow: hidden;
     height: 100%;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 
-    img {
-      max-width: none;
-      max-height: 100%;
-    }
+    // img {
+    //   max-width: none;
+    //   max-height: 100%;
+    // }
   }
 
   .person__info {
     position: absolute;
-    bottom: 59px;
-    left: -42px;
+    bottom: var(--padding59);
+    left: -23px;
   }
 
 }
@@ -966,6 +976,15 @@ ol li::before {
     display: flex;
     flex-direction: column;
     gap: 80px 8px;
+    .person__info {
+      position: absolute;
+      bottom: 15px;
+      left: -23px;
+    }
+  }
+
+  .about__bottom {
+    padding-left: 20px;
   }
 }
 
@@ -973,7 +992,7 @@ ol li::before {
 
 
 .projects {
-  padding: 143px 59px 134px 59px;
+  padding: 143px var(--padding59) 134px var(--padding59);
   display: flex;
   flex-direction: column;
   gap: 80px 8px;
@@ -988,7 +1007,7 @@ ol li::before {
 
     h2 {
       width: 50%;
-      margin-left: calc(var(--bigPadding) - 59px);
+      margin-left: calc(var(--bigPadding) - var(--padding59));
       // margin-left: 285px;
     }
 
@@ -1158,15 +1177,15 @@ ol li::before {
       flex-wrap: wrap;
       padding: 0px 15px;
       flex-direction: column;
-align-items: flex-start;
-margin-left: var(--bigPadding);
+      align-items: flex-start;
+      margin-left: var(--bigPadding);
 
 
       h2 {
         width: 100%;
         margin-left: 0px;
         margin-bottom: 30px;
-        
+
       }
 
       p {
@@ -1222,7 +1241,7 @@ margin-left: var(--bigPadding);
 
 .form {
   border-bottom: 1px solid #fff;
-  padding: 143px 59px 134px 0px;
+  padding: 143px var(--padding59) 134px 0px;
 
 
   &__top {
@@ -1275,6 +1294,10 @@ margin-left: var(--bigPadding);
 
 }
 
+//form inputs
+
+
+
 
 // ===============================/main=======================================
 // ================================footer=======================================
@@ -1283,12 +1306,12 @@ margin-left: var(--bigPadding);
   justify-content: center;
   max-width: 1920px;
   width: 100%;
-  margin-top: 140px;
+  // margin-top: 140px;
 
 
   .container {
     // padding: 157px 100px 80px var(--bigPadding);
-    padding: 143px 59px 134px 0px;
+    padding: 140px var(--padding59) 134px 0px;
   }
 
 
@@ -1365,19 +1388,17 @@ margin-left: var(--bigPadding);
 
     .contactUs {
       width: 50%;
+      margin-top: -100px;
+
     }
   }
 }
 
 @media (max-width: 1024px) {
   .footer {
-    margin-top: 80px;
 
     .container {
-      // padding: 36px 8px 20px 20px;
-      padding-right: 15px;
-      padding-left: 15px;
-      padding-bottom: 20px;
+      padding: 80px 15px 20px 15px;
     }
 
 
@@ -1403,6 +1424,8 @@ margin-left: var(--bigPadding);
 
       .contactUs {
         width: 100%;
+        margin-top: 0px;
+
       }
 
       .section__details {
@@ -1436,6 +1459,6 @@ margin-left: var(--bigPadding);
 
 @media (max-width: 1024px) {
   #cursor {
-    borde: none;
+    border: none;
   }
 }
