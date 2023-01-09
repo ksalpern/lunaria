@@ -217,27 +217,27 @@ ol li::before {
   }
 
   h1 {
-    font-size: 65px;
-  }
-
-  h2 {
     font-size: 60px;
   }
 
-  h3 {
+  h2 {
     font-size: 55px;
   }
 
+  h3 {
+    font-size: 40px;
+  }
+
   h4 {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   h5 {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
 
@@ -541,6 +541,16 @@ ol li::before {
 //   // width: 100%;
 // }
 
+
+@media (max-width: 1024px) {
+  .banner {
+ 
+  
+    .container {
+      padding: 0px 16px;
+
+    }}
+}
 
 
 
@@ -919,7 +929,7 @@ ol li::before {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      // padding: 0px 16px;
+      padding: 0px 16px;
 
 
       h2 {
@@ -965,7 +975,7 @@ ol li::before {
   }
 
   .projects__slide {
-    padding: 0 calc(8px + (70 - 8) * ((100vw - 320px) / (1920 - 320)));
+    padding: 0 calc(8px + (50 - 8) * ((100vw - 320px) / (1920 - 320)));
     ;
   }
 
@@ -981,6 +991,7 @@ ol li::before {
 
   .project__info {
     margin: 10% 0 0 10%;
+    max-width: 453px;
 
     h5 {
       font-weight: bold;
@@ -1120,7 +1131,7 @@ ol li::before {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      // padding: 0px 16px;
+      padding: 0px 16px;
 
 
       h2 {
@@ -1214,7 +1225,7 @@ ol li::before {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      // padding: 0px 16px;
+      padding: 0px 16px;
 
 
       h2 {
@@ -1343,7 +1354,6 @@ ol li::before {
     margin-top: 100px;
 
     .container {
-      border-top: 1px solid #fff;
       padding: 36px 8px 20px 20px;
     }
 
