@@ -810,7 +810,7 @@ ol li::before {
 
 
 .about {
-  padding: 143px 59px 134px 59px;
+  padding: 143px 59px 134px 0px;
   display: flex;
   flex-direction: column;
   gap: 80px 8px;
@@ -821,10 +821,10 @@ ol li::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    margin-left: var(--bigPadding);
     h2 {
       width: 50%;
-      margin-left: var(--bigPadding);
+      // margin-left: var(--bigPadding);
 
     }
   }
@@ -950,7 +950,7 @@ ol li::before {
 
 
 .projects {
-  padding: 143px 59px 134px 59px;
+  padding: 143px 59px 134px 0px;
   display: flex;
   flex-direction: column;
   gap: 80px 8px;
@@ -1190,7 +1190,7 @@ ol li::before {
 
 .form {
   border-bottom: 1px solid #fff;
-  padding: 143px 59px 134px 59px;
+  padding: 143px 59px 134px 0px;
 
 
   &__top {
@@ -1205,7 +1205,7 @@ ol li::before {
     }
 
     p {
-      // width: 50%;
+      width: 50%;
     }
   }
 }
