@@ -155,9 +155,6 @@ ol li::before {
   .mobile__hidden {
     display: none;
   }
-  .container {
-    padding: 0 15px;
-  }
   ::-webkit-scrollbar {
     width: 0px;
   }
@@ -677,9 +674,35 @@ ol li::before {
   left: -42px;
 }
 
+@media (max-width: 1024px) {
+  .about {
+    padding: 143px 8px 134px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px 8px;
+  }
+  .about__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .about__top h2 {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+  .about__top p {
+    width: 100%;
+  }
+}
 .projects {
-  border-bottom: 1px solid #fff;
   padding: 143px 59px 134px 59px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px 8px;
+  border-bottom: 1px solid #fff;
   /* Слайдер */
   /* Слайдер запущен */
   /* Слайдер с точками */
@@ -702,7 +725,6 @@ ol li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 120px;
 }
 .projects__top h2 {
   width: 50%;
@@ -711,18 +733,19 @@ ol li::before {
 .projects__bottom {
   position: relative;
 }
+.projects .projects__slide {
+  padding: 0 calc(8px + 62 * (100vw - 320px) / 1600);
+}
 .projects .project__img {
   display: flex;
   justify-content: center;
-  width: 760px;
   margin: 0 auto;
-}
-.projects .project__img img {
-  width: 100%;
-  height: 100%;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
 }
 .projects .project__info {
-  margin: 70px 0 0 115px;
+  margin: 10% 0 0 10%;
 }
 .projects .project__info h5 {
   font-weight: bold;
@@ -733,23 +756,27 @@ ol li::before {
   opacity: 0.5;
 }
 .projects .projects__slide:nth-child(4n+1) .project__img {
-  height: 550px;
+  height: calc(305px + 245 * (100vw - 980px) / 940);
+  max-height: 550px;
 }
 .projects .projects__slide:nth-child(4n+2) .project__img {
-  height: 700px;
+  height: calc(388px + 312 * (100vw - 980px) / 940);
+  max-height: 700px;
 }
 .projects .projects__slide:nth-child(4n+3) .project__img {
-  height: 500px;
+  height: calc(277px + 223 * (100vw - 980px) / 940);
+  max-height: 500px;
 }
 .projects .projects__slide:nth-child(4n+4) .project__img {
-  height: 460px;
+  height: calc(255px + 205 * (100vw - 980px) / 940);
+  max-height: 460px;
 }
 .projects .slick-track {
   display: flex;
 }
 .projects .slick-arrow {
   position: absolute;
-  top: 259px;
+  top: 25%;
   z-index: 2;
   font-size: 0;
   width: 50px;
@@ -773,6 +800,52 @@ ol li::before {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (max-width: 1024px) {
+  .projects {
+    padding: 143px 8px 134px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px 8px;
+    border-bottom: 1px solid #fff;
+    /* Стрелка вправо */
+  }
+  .projects__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .projects__top h2 {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+  .projects__top p {
+    width: 100%;
+  }
+  .projects .slick-arrow {
+    opacity: 0.5;
+  }
+  .projects .slick-arrow.slick-prev {
+    left: -10px;
+  }
+  .projects .slick-arrow.slick-next {
+    right: -10px;
+  }
+  .projects .projects__slide:nth-child(4n+1) .project__img {
+    height: calc(152px + 348 * (100vw - 320px) / 660);
+  }
+  .projects .projects__slide:nth-child(4n+2) .project__img {
+    height: calc(199px + 301 * (100vw - 320px) / 660);
+  }
+  .projects .projects__slide:nth-child(4n+3) .project__img {
+    height: calc(277px + 223 * (100vw - 320px) / 660);
+  }
+  .projects .projects__slide:nth-child(4n+4) .project__img {
+    height: calc(255px + 245 * (100vw - 320px) / 660);
+  }
+}
 .form {
   border-bottom: 1px solid #fff;
   padding: 143px 59px 134px 59px;
@@ -786,6 +859,30 @@ ol li::before {
 .form__top h2 {
   width: 50%;
   margin-left: var(--bigPadding);
+}
+@media (max-width: 1024px) {
+  .form {
+    padding: 143px 8px 134px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px 8px;
+    border-bottom: 1px solid #fff;
+  }
+  .form__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .form__top h2 {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+  .form__top p {
+    width: 100%;
+  }
 }
 .footer {
   display: flex;
