@@ -928,6 +928,162 @@ ol li::before {
     width: 100%;
   }
 }
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #fff;
+  opacity: 0.5;
+  top: -5px;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+.styled-input label {
+  color: #fff;
+  opacity: 0.5;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 4px;
+  border-bottom: 1px solid var(--whiteText);
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+  resize: vertical;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  float: left;
+  padding: 53px 164px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.089);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+.myRange {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  padding: 0;
+  outline: none;
+  border-bottom: none;
+  transition: opacity 0.2s;
+}
+
+.myRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: var(--whiteText);
+  cursor: pointer;
+}
+
+.myRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: var(--whiteText);
+  cursor: pointer;
+}
+
+.myRange {
+  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 40%, #fff 40%, #fff 100%);
+  border: solid 2px #82CFD0;
+  border-radius: 8px;
+  height: 30px;
+  width: 400px;
+  outline: none;
+  transition: 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.myRange::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #434343;
+}
+
 .footer {
   display: flex;
   justify-content: center;

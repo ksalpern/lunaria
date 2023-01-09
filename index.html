@@ -48,7 +48,7 @@
     <!-- --------------------------------/header----------------------------------------.- -->
     <!-- --------------------------------main--------------------------------------------- -->
     <main class="main">
-      <div class="banner">
+      <!-- <div class="banner">
         <div class="container">
           <div class="banner__text">
             <h1>
@@ -199,7 +199,6 @@
           <ul class="about__bottom">
             <li class="team__item">
               <div class="persom__img" style="background-image: url(./assets/1person.png)">
-                <!-- <img src="assets/1person.png" alt="" /> -->
               </div>
               <div class="person__info">
                 <h4 class="name">Vanessa Kanu</h4>
@@ -208,7 +207,6 @@
             </li>
             <li class="team__item">
               <div class="persom__img" style="background-image: url(./assets/2person.png)">
-                <!-- <img src="assets/2person.png" alt="" /> -->
               </div>
               <div class="person__info">
                 <h4 class="name">Jeff Puritt</h4>
@@ -217,7 +215,6 @@
             </li>
             <li class="team__item">
               <div class="persom__img" style="background-image: url(./assets/3person.png)">
-                <!-- <img src="assets/3person.png" alt="" /> -->
               </div>
               <div class="person__info">
                 <h4 class="name">Michael Ringman</h4>
@@ -232,7 +229,7 @@
         <div class="projects">
           <div class="projects__top">
             <h2>Projects</h2>
-            <div class=" section__details">
+            <div class="section__details">
               <p>
                 we combine sharp design with rich technology to craft exciting
                 brands.
@@ -243,7 +240,6 @@
             <div class="projects__slider">
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/1work.png)">
-                  <!-- <img src="assets/1work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>ROSEMARY FOOD</h5>
@@ -255,7 +251,6 @@
               </div>
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/2work.png)">
-                  <!-- <img src="assets/2work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>CONEXE</h5>
@@ -267,7 +262,6 @@
               </div>
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/4work.png)">
-                  <!-- <img src="assets/4work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>ROSEMARY FOOD</h5>
@@ -279,7 +273,6 @@
               </div>
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/3work.png)">
-                  <!-- <img src="assets/4work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>ROSEMARY FOOD</h5>
@@ -291,7 +284,6 @@
               </div>
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/1work.png)">
-                  <!-- <img src="assets/4work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>ROSEMARY FOOD</h5>
@@ -303,7 +295,6 @@
               </div>
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/2work.png)">
-                  <!-- <img src="assets/3work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>ROSEMARY FOOD</h5>
@@ -315,7 +306,6 @@
               </div>
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/4work.png)">
-                  <!-- <img src="assets/3work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>ROSEMARY FOOD</h5>
@@ -327,7 +317,6 @@
               </div>
               <div class="projects__slide">
                 <div class="project__img" style="background-image: url(./assets/3work.png)">
-                  <!-- <img src="assets/3work.png" alt="" /> -->
                 </div>
                 <div class="project__info">
                   <h5>ROSEMARY FOOD</h5>
@@ -340,25 +329,56 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="container">
-        <div class="form">
-          <div class="section__header">
-            <h2>tell us about your project</h2>
-            <div class="section__details">
-              <p>
-                Since the launch of his eponymous jewelry line in 2000, Marco
-                Bicego has redefined modern luxury with the launch of his
-                eponymous jewelry line in 8u Marco Bicego has redefined modern
-                luxury with sensuous,
-              </p>
-            </div>
-          </div>
-          <div class="form__bottom">
-            
+        <div class="section__header">
+          <h2>tell us about your project</h2>
+          <div class="section__details">
+            <p>
+              Since the launch of his eponymous jewelry line in 2000, Marco
+              Bicego has redefined modern luxury with the launch of his
+              eponymous jewelry line in 8u Marco Bicego has redefined modern
+              luxury with sensuous,
+            </p>
           </div>
         </div>
+        <form class="contact__form" action="#" method="post" enctype="multipart/form-data">
+          <div class="row input-container">
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <input type="text" required />
+                <label>Name</label>
+              </div>
+            </div>
+
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <input type="text" required />
+                <label>Your Contact / Email or Phone with Messengers </label>
+              </div>
+            </div>
+ 
+            <div class="col-xs-12">
+              <div class="styled-input wide" id="rangeContainer">
+                <!-- <input type="range" min="100" max="25000" value="550" class="myRange" id="myRange"> -->
+                <input type="range" value="10000" min="0" max="25000" step="1" id="myRange" class="myRange">
+                <p>$ <span id="rangeValue">1250</span></p>
+              </div>
+            </div>
+
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <textarea required></textarea>
+                <label>Message</label>
+              </div>
+            </div>
+
+            <div class="col-xs-12">
+              <div class="btn-lrg submit-btn" type="submit">SEND</div>
+            </div>
+        </form>
+
       </div>
     </main>
 
@@ -447,6 +467,8 @@
   <script src="./scripts/cursor.js"></script>
   <script src="./scripts/gsapAnimation.js"></script>
   <script src="./scripts/linksOnScroll.js"></script>
+  <script src="./scripts/validation.js"></script>
+  <script src="./scripts/form.js"></script>
 </body>
 
 </html>
