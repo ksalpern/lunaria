@@ -4,6 +4,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     speed: 300,
     arrows: false,
+    focusOnSelect: true,
     responsive: [
       {
         breakpoint: 1500,
@@ -29,7 +30,6 @@ $(document).ready(function () {
     slidesToShow: 2,
     slidesToScroll: 1,
     speed: 300,
-    // infinite: false,
     responsive: [
       {
         breakpoint: 980,

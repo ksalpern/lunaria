@@ -1506,7 +1506,7 @@ input[type=checkbox]:checked+label {
 #cursor,
 #aura {
   position: absolute;
-  transition: .5s cubic-bezier(.75, -1.25, .3, 2.33) transform, .2s cubic-bezier(.75, -1.25, .3, 2.33) opacity;
+  transition: .4s cubic-bezier(.75, -1.25, .3, 2.33) transform, .2s cubic-bezier(.75, -1.25, .3, 2.33) opacity;
   user-select: none;
   pointer-events: none;
   z-index: 1000;
@@ -1518,6 +1518,10 @@ input[type=checkbox]:checked+label {
   width: 5px;
   height: 5px;
   background-color: rgba(255, 255, 255, 0.5);
+  &.active{
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 #aura{
   width: 46px;
@@ -1525,6 +1529,12 @@ input[type=checkbox]:checked+label {
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.02);
   // transition: 0.5s scale;
+  &.active{
+    // border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+
+    transform: scale(1.3);
+  }
 }
 #cursor.hidden,
 #aura.hidden{
