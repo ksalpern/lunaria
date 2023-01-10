@@ -185,6 +185,7 @@ ol li::before {
   .section__header {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 40px;
   }
   .section__header h2 {
     width: 100%;
@@ -219,6 +220,16 @@ ol li::before {
   }
   p {
     font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+    line-height: 47px;
+    margin-bottom: 35px;
+  }
+  h2 {
+    font-size: 47px;
   }
 }
 .header {
@@ -473,6 +484,9 @@ ol li::before {
   .banner .container {
     padding: 0px 16px;
   }
+  .banner__text {
+    margin-bottom: 140px;
+  }
 }
 .services {
   position: relative;
@@ -555,23 +569,6 @@ ol li::before {
   position: relative;
   width: 125%;
   padding: 80px 15px 80px 15px;
-  /* Слайдер */
-  /* Слайдер запущен */
-  /* Слайдер с точками */
-  /* Ограничивающая оболочка */
-  /* Лента слайдов */
-  /* Слайд */
-  /* Слайд активный (показывается) */
-  /* Слайд основной */
-  /* Слайд по центру */
-  /* Клонированный слайд */
-  /* Стрелка */
-  /* Стрелка влево */
-  /* Стрелка вправо */
-  /* Стрелка не активная */
-  /* Точки (булиты) */
-  /* Активная точка */
-  /* Элемент точки */
 }
 .values::after {
   content: "";
@@ -585,6 +582,7 @@ ol li::before {
 .values .slick-track {
   display: flex;
 }
+
 .accordion-item-header {
   margin-bottom: 28px;
   margin-right: 100px;
@@ -831,29 +829,17 @@ ol li::before {
 
 @media (max-width: 1024px) {
   .projects {
-    padding: 143px 8px 134px 8px;
+    padding: 8px 8px 8px 8px;
     display: flex;
     flex-direction: column;
     gap: 80px 8px;
     border-bottom: 1px solid #fff;
-    /* Стрелка вправо */
   }
-  .projects__top {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0px 15px;
-    flex-direction: column;
-    align-items: flex-start;
+  .projects__bottom {
+    margin-top: 0px;
+  }
+  .projects .section__header {
     margin-left: var(--bigPadding);
-  }
-  .projects__top h2 {
-    width: 100%;
-    margin-left: 0px;
-    margin-bottom: 30px;
-  }
-  .projects__top p {
-    width: 100%;
   }
   .projects .slick-arrow {
     opacity: 0.5;
@@ -912,7 +898,7 @@ ol li::before {
   .form {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 143px 8px 134px 8px;
+    padding: 80px 8px 134px 8px;
     display: flex;
     flex-direction: column;
     gap: 30px 8px;
@@ -932,6 +918,9 @@ ol li::before {
   }
   .form__top p {
     width: 100%;
+  }
+  .main .form__container {
+    padding-right: 0px;
   }
 }
 input:focus ~ label,
@@ -962,7 +951,7 @@ textarea:valid ~ label {
   opacity: 0.5;
   padding: 0;
   position: absolute;
-  top: 40%;
+  bottom: 50%;
   left: 0;
   transition: all 0.25s ease;
   pointer-events: none;
@@ -1044,6 +1033,9 @@ textarea {
     width: 100%;
     text-align: center;
     padding: 26px 60px;
+  }
+  .submit-btn:hover {
+    scale: 0.9;
   }
 }
 input[type=checkbox] + label {
