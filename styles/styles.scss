@@ -204,10 +204,12 @@ ol li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 140px;
   margin-left: var(--bigPadding);
   gap: 20px 40px;
 
   h2 {
+    max-width: 424px;
     width: 50%;
     // margin-left: var(--bigPadding);
 
@@ -1214,15 +1216,20 @@ ol li::before {
   }
 }
 
-
-
-
-
+.form__container {
+  border-bottom: 1px solid var(--whiteText);
+}
 
 .form {
-  border-bottom: 1px solid #fff;
-  padding: 143px var(--padding59) 134px 0px;
-
+  // border-bottom: 1px solid #fff;
+  // padding: 143px var(--padding59) 134px 0px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: var(--bigPadding);
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   &__top {
     display: flex;
@@ -1238,6 +1245,10 @@ ol li::before {
     p {
       width: 50%;
     }
+  }
+
+  h5 {
+    margin-bottom: 50px;
   }
 }
 
@@ -1279,18 +1290,17 @@ input:focus~label,
 textarea:focus~label,
 input:valid~label,
 textarea:valid~label {
-  font-size: 0.75em;
-  color: #fff;
-  opacity: 0.5;
-  top: -5px;
+  font-size: 24px;
+  color: var(--whiteText);
+  opacity: 0.34;
+  top: -24px;
   -webkit-transition: all 0.225s ease;
   transition: all 0.225s ease;
 }
 
 .styled-input {
-  float: left;
   width: 293px;
-  margin: 1rem 0;
+  // margin: 1rem 0;
   position: relative;
   border-radius: 4px;
 }
@@ -1302,31 +1312,37 @@ textarea:valid~label {
 }
 
 .styled-input label {
-  color: #fff;
+  font-size: 24px;
+  color: var(--whiteText);
   opacity: 0.5;
-  padding: 1.3rem 30px 1rem 30px;
+  padding: 0;
   position: absolute;
-  top: 10px;
+  top: 40%;
   left: 0;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   pointer-events: none;
 }
 
-.styled-input.wide {
-  width: 650px;
-  max-width: 100%;
+.wide {
+  width: 50%;
+  margin-bottom: 110px;
+}
+
+.wide:nth-child(even) {
+  width: 633px;
+  align-self: flex-start;
 }
 
 input,
 textarea {
-  padding: 30px;
+  padding: 20px 20px 26px 0;
   border: 0;
   width: 100%;
-  font-size: 1rem;
+  font-size: 30px;
+  font-weight: 600;
   background-color: transparent;
-  color: white;
-  border-radius: 4px;
+  color: var(--whiteText);
   border-bottom: 1px solid var(--whiteText);
 }
 
@@ -1344,18 +1360,18 @@ textarea:focus~span {
 
 textarea {
   width: 100%;
-  min-height: 15em;
-  resize: vertical;
+  height: 300px;
+  resize: none;
+  // border-bottom: none;
 }
 
-.input-container {
-  width: 650px;
-  max-width: 100%;
-  margin: 20px auto 25px auto;
-}
+// .input-container {
+//   width: 100px;
+//   // max-width: 100%;
+//   // margin: 20px auto 25px auto;
+// }
 
 .submit-btn {
-  float: left;
   padding: 53px 164px;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.089);
@@ -1367,13 +1383,13 @@ textarea {
 }
 
 .submit-btn:hover {
- scale: 1.1;
+  scale: 1.1;
 }
 
 @media (max-width: 768px) {
   .submit-btn {
     width: 100%;
-    float: none;
+    // float: none;
     text-align: center;
   }
 }
@@ -1388,6 +1404,34 @@ input[type=checkbox]:checked+label {
   font-style: normal;
 }
 
+//range input
+.range__cover {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  gap: 8px 48px;
+
+  .inputRange__cover {
+    height: fit-content;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 55%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background: var(--whiteText);
+      opacity: .5;
+    }
+  }
+
+  p {
+    font-size: 30px;
+
+  }
+}
 
 .myRange {
   -webkit-appearance: none;
@@ -1403,9 +1447,7 @@ input[type=checkbox]:checked+label {
 
 }
 
-.myRange:hover {
-
-}
+.myRange:hover {}
 
 .myRange::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -1426,14 +1468,14 @@ input[type=checkbox]:checked+label {
 }
 
 .myRange {
-  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 40%, #fff 40%, #fff 100%);
-  border: solid 2px #82CFD0;
+  background: linear-gradient(to right, var(--whiteText) 0%, var(--whiteText) 40%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
   border-radius: 8px;
-  height: 30px;
-  width: 400px;
+  height: 5px;
+  width: 234px;
   outline: none;
   transition: 450ms ease-in;
   -webkit-appearance: none;
+  position: relative;
 }
 
 .myRange::-webkit-slider-thumb {
@@ -1442,7 +1484,21 @@ input[type=checkbox]:checked+label {
   border-radius: 50%;
   -webkit-appearance: none;
   cursor: ew-resize;
-  background: #434343;
+  background: var(--whiteText);
+}
+
+.range__values {
+  position: relative;
+  width: 100%;
+}
+
+#warning {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  color: #ea2828;
+  font-size: 10px;
 }
 
 // input[type=range] {
