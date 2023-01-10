@@ -274,7 +274,12 @@ ol li::before {
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-    }
+      transition: all 2s ease;
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      -o-transition: all 2s ease;
+}
 
     .yellow {
       position: absolute;
@@ -290,7 +295,12 @@ ol li::before {
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
-    }
+      transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease;
+}
   }
 
   .header__body {
@@ -488,18 +498,12 @@ ol li::before {
   .container {
     margin: 0 auto;
     padding: 0;
-
 }
-
 }
 
 .banner {
   position: relative;
-  transition: all 2s ease;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  -o-transition: all 2s ease;
+
   .container {
     border-bottom: 1px solid #fff;
     padding: 57px 84px 50px var(--bigPadding);
@@ -571,10 +575,23 @@ ol li::before {
     background: var(--darkBlue);
     width: 2850px;
     height: 1560px;
-    border-radius: 50%;
     z-index: -1;
     transform: rotate(-10deg);
-  }
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all .9s ease;
+    -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+    -o-transition: all .9s ease;
+}
 
   .redCircle {
     position: absolute;
@@ -583,9 +600,18 @@ ol li::before {
     background: var(--red);
     width: 1023px;
     height: 818px;
-    border-radius: 50%;
     z-index: -1;
-  }
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
 
   &__title {
     position: absolute;

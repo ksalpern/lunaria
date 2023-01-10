@@ -29,18 +29,30 @@ const trig = {
   trigger: '.main',
   start: 'top center',
   scrub: true,
-  toggleActions: 'restart none none none'
-  // toggleActions: 'restart reverse reverse reverse'
+  toggleActions: 'restart none none none',
 }
 gsap.to('.blue', {
   scrollTrigger: trig,
-  x: '-60%',
-  y: '-5%', 
-  duration: 20
+  x: -600,
+  y: '-5%',
+  duration: 200,
 })
 gsap.to('.yellow', {
   scrollTrigger: trig,
-  x: '-90%', 
+  x: -700,
   y: '-5%',
-  duration: 20
+  duration: 20,
+  // ease: "Power1.easeOut"
+})
+gsap.to('.redCircle', {
+  scrollTrigger: trig,
+  x: 0,
+  y: '300%',
+  duration: 20,
+})
+gsap.to('.darckCircle', {
+  scrollTrigger: trig,
+  x: 0,
+  y: '300%',
+  duration: 20,
 })
