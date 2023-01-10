@@ -56,3 +56,31 @@ gsap.to('.darckCircle', {
   y: '300%',
   duration: 20,
 })
+gsap.to('.header', {
+  scrollTrigger: {
+    trigger: '.banner__links',
+    start: 600,
+    end: 1000 * 100,
+    scrub: true,
+    // toggleActions: 'restart none none none',
+    toggleClass: 'fixed',
+    // markers: {
+    //   fontSize: '50px'
+    // }
+  },
+
+})
+gsap.to('.header__menu', {
+  scrollTrigger: {
+    trigger: '.banner__links',
+    start: 0,
+    end: 700,
+    scrub: true,
+
+    // toggleClass: 'fixed',
+
+  },
+  x: -600,
+  // y: '300%',
+  // duration: 20,
+})

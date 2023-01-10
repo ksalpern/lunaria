@@ -285,6 +285,13 @@ ol li::before {
 .header .header__burger {
   display: none;
 }
+.header .header__menu {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
 .header .header__menu ul {
   display: flex;
   color: #ffffff;
@@ -456,12 +463,22 @@ ol li::before {
 .banner__links {
   position: -webkit-sticky;
   position: sticky;
-  top: 45px;
+  top: 25px;
   display: flex;
   justify-content: end;
   gap: 32px 111px;
   z-index: 100000;
   position: relative;
+}
+.banner .fixed {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 @media (max-width: 1024px) {
