@@ -231,7 +231,7 @@ ol li::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 100;
 }
 .header .container {
   border-top: 1px solid var(--whiteText);
@@ -311,10 +311,13 @@ ol li::before {
     overflow: hidden;
   }
   .header .container {
-    padding: 39px 20px;
+    padding: 25px 20px;
   }
   .header .content {
     width: calc(310px + 590 * (100vw - 320px) / 660);
+  }
+  .header .logo {
+    width: 200px;
   }
   .header .header__burger {
     display: block;
@@ -324,12 +327,6 @@ ol li::before {
     margin-left: 30px;
     position: relative;
     z-index: 5;
-  }
-  .header .header__logo {
-    position: relative;
-    z-index: 5;
-    width: 150px;
-    height: 35px;
   }
   .header .header__burger span {
     position: absolute;
@@ -425,6 +422,11 @@ ol li::before {
   }
 }
 
+@media (max-width: 980px) {
+  .header {
+    padding-top: 0;
+  }
+}
 .main {
   position: relative;
   margin-top: 204px;
@@ -720,7 +722,7 @@ ol li::before {
 
 @media (max-width: 1024px) {
   .about {
-    padding: 143px 15px 134px 15px;
+    padding: 50px 15px 134px 15px;
     display: flex;
     flex-direction: column;
     gap: 80px 8px;
@@ -740,23 +742,9 @@ ol li::before {
   flex-direction: column;
   gap: 80px 8px;
   border-bottom: 1px solid #fff;
-  /* Слайдер */
-  /* Слайдер запущен */
-  /* Слайдер с точками */
-  /* Ограничивающая оболочка */
-  /* Лента слайдов */
-  /* Слайд */
-  /* Слайд активный (показывается) */
-  /* Слайд основной */
-  /* Слайд по центру */
-  /* Клонированный слайд */
-  /* Стрелка */
-  /* Стрелка влево */
-  /* Стрелка вправо */
-  /* Стрелка не активная */
-  /* Точки (булиты) */
-  /* Активная точка */
-  /* Элемент точки */
+}
+.projects .section__header {
+  margin-left: calc(var(--bigPadding) - var(--padding59));
 }
 .projects__top {
   gap: 20px;
@@ -770,6 +758,7 @@ ol li::before {
 }
 .projects__bottom {
   position: relative;
+  margin-top: 120px;
 }
 .projects .projects__slide {
   padding: 0 calc(8px + 42 * (100vw - 320px) / 1600);
@@ -839,6 +828,7 @@ ol li::before {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 @media (max-width: 1024px) {
   .projects {
     padding: 143px 8px 134px 8px;
@@ -887,8 +877,9 @@ ol li::before {
     height: calc(255px + 245 * (100vw - 320px) / 660);
   }
 }
-.form__container {
+.main .form__container {
   border-bottom: 1px solid var(--whiteText);
+  padding-right: var(--padding59);
 }
 
 .form {
@@ -898,6 +889,7 @@ ol li::before {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .form__top {
   display: flex;
@@ -918,11 +910,12 @@ ol li::before {
 
 @media (max-width: 1024px) {
   .form {
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 143px 8px 134px 8px;
     display: flex;
     flex-direction: column;
-    gap: 80px 8px;
-    border-bottom: 1px solid #fff;
+    gap: 30px 8px;
   }
   .form__top {
     display: flex;
@@ -1021,6 +1014,7 @@ textarea {
   color: white;
   font-size: 20px;
   cursor: pointer;
+  align-self: start;
   transition: all 300ms ease;
 }
 
@@ -1028,10 +1022,28 @@ textarea {
   scale: 1.1;
 }
 
+@media (max-width: 1700px) {
+  .wide:nth-child(even) {
+    width: 50%;
+    align-self: flex-start;
+  }
+}
+@media (max-width: 1279px) {
+  .wide {
+    width: 100%;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+  .wide:nth-child(even) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 768px) {
   .submit-btn {
     width: 100%;
     text-align: center;
+    padding: 26px 60px;
   }
 }
 input[type=checkbox] + label {
@@ -1132,6 +1144,21 @@ input[type=checkbox]:checked + label {
   font-size: 10px;
 }
 
+@media (max-width: 767px) {
+  .range__cover {
+    display: flex;
+    align-items: start;
+    gap: 50px 48px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .myRange {
+    width: 100%;
+  }
+  .range__cover .inputRange__cover {
+    width: 100%;
+  }
+}
 .footer {
   display: flex;
   justify-content: center;
