@@ -36,35 +36,6 @@
 
 // ===============================general style=======================================
 // ===============================cursor style========================================
-body {
-  // cursor: url('../assets/dot.svg'), auto;
-}
-
-#cursor {
-  z-index: 100;
-  pointer-events: none;
-  height: 100px;
-  width: 100px;
-  background: transparent;
-  opacity: 0.3;
-  border-radius: 50%;
-  border: 1px solid var(--whiteText);
-  position: absolute;
-  display: none;
-  transition: 0.1s ease;
-  -webkit-transition: 0.1s ease;
-  -moz-transition: 0.1s ease;
-  -ms-transition: 0.1s ease;
-  -o-transition: 0.1s ease;
-}
-
-a:hover~#cursor {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-}
 
 // ==============================/cursor style========================================
 
@@ -1525,7 +1496,39 @@ input[type=checkbox]:checked+label {
 }
 
 @media (max-width: 1024px) {
-  #cursor {
-    border: none;
+  // #cursor {
+  //   border: none;
+  // }
+}
+*{
+  cursor: none;
+}
+#cursor,
+#aura {
+  position: absolute;
+  transition: .5s cubic-bezier(.75, -1.25, .3, 2.33) transform, .2s cubic-bezier(.75, -1.25, .3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1000;
+  border-radius: 50%;
+  
+}
+
+#cursor {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#aura{
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.02);
+  // transition: 0.5s scale;
+}
+#cursor.hidden,
+#aura.hidden{
+  &.hidden{
+    transform: scale(0.01)
   }
 }

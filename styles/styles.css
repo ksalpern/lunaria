@@ -26,32 +26,6 @@
   --padding59: 59px;
 }
 
-#cursor {
-  z-index: 100;
-  pointer-events: none;
-  height: 100px;
-  width: 100px;
-  background: transparent;
-  opacity: 0.3;
-  border-radius: 50%;
-  border: 1px solid var(--whiteText);
-  position: absolute;
-  display: none;
-  transition: 0.1s ease;
-  -webkit-transition: 0.1s ease;
-  -moz-transition: 0.1s ease;
-  -ms-transition: 0.1s ease;
-  -o-transition: 0.1s ease;
-}
-
-a:hover ~ #cursor {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-}
-
 body {
   background: var(--bg);
   color: var(--whiteText);
@@ -1259,8 +1233,37 @@ input[type=checkbox]:checked + label {
     right: inherit;
   }
 }
-@media (max-width: 1024px) {
-  #cursor {
-    border: none;
-  }
+* {
+  cursor: none;
+}
+
+#cursor,
+#aura {
+  position: absolute;
+  transition: 0.5s cubic-bezier(0.75, -1.25, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.25, 0.3, 2.33) opacity;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 1000;
+  border-radius: 50%;
+}
+
+#cursor {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#aura {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+#cursor.hidden.hidden,
+#aura.hidden.hidden {
+  transform: scale(0.01);
 }/*# sourceMappingURL=styles.css.map */
