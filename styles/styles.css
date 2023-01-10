@@ -675,6 +675,7 @@ ol li::before {
   color: var(--whiteText);
 }
 .about__details button:hover span {
+  opacity: 0.5;
   transform: translateX(20px);
   -webkit-transform: translateX(20px);
   -moz-transform: translateX(20px);

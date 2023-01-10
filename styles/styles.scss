@@ -809,6 +809,7 @@ ol li::before {
 
     button:hover {
       span {
+        opacity: 0.5;
         transform: translateX(20px);
         -webkit-transform: translateX(20px);
         -moz-transform: translateX(20px);
