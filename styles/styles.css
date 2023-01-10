@@ -1076,34 +1076,9 @@ input[type=checkbox]:checked + label {
 
 .myRange {
   -webkit-appearance: none;
-  width: 100%;
-  height: 10px;
-  border-radius: 5px;
   padding: 0;
-  outline: none;
   border-bottom: none;
   transition: opacity 0.2s;
-}
-
-.myRange::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 0;
-  background: var(--whiteText);
-  cursor: pointer;
-}
-
-.myRange::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border: 0;
-  background: var(--whiteText);
-  cursor: pointer;
-}
-
-.myRange {
   background: linear-gradient(to right, var(--whiteText) 0%, var(--whiteText) 40%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
   border-radius: 8px;
   height: 5px;
@@ -1115,12 +1090,27 @@ input[type=checkbox]:checked + label {
 }
 
 .myRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: var(--whiteText);
+  cursor: pointer;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   -webkit-appearance: none;
   cursor: ew-resize;
   background: var(--whiteText);
+}
+
+.myRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: var(--whiteText);
+  cursor: pointer;
 }
 
 .range__values {
@@ -1147,6 +1137,7 @@ input[type=checkbox]:checked + label {
   }
   .myRange {
     width: 100%;
+    height: 7px;
   }
   .range__cover .inputRange__cover {
     width: 100%;
