@@ -187,7 +187,8 @@ ol li::before {
     font-size: 40px;
   }
   h4 {
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 40px;
   }
   h5 {
     font-size: 24px;
@@ -1077,6 +1078,19 @@ textarea {
   .submit-btn:hover {
     scale: 0.9;
   }
+  input,
+textarea {
+    font-size: 22px;
+  }
+  .styled-input label {
+    font-size: 20px;
+  }
+  input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+    font-size: 20px;
+  }
 }
 .range__cover {
   display: flex;
@@ -1267,6 +1281,7 @@ textarea {
   .footer__info .contactUs {
     width: 100%;
     margin-top: 0px;
+    font-size: 24px;
   }
   .footer__info .section__details {
     width: 100%;

@@ -11,8 +11,8 @@ $mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->ISHTML (true);
 
-$mail->setFrom('youremail@test.co', 'Test letter lunaria');
-$mail->addAddress('youremail@test.co');
+$mail->setFrom('myEmail@test.co', 'Test letter lunaria');
+$mail->addAddress('myEmail@test.co');
 $mail->Subject = 'Test lunaria subject'
 
 

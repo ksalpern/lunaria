@@ -32,8 +32,6 @@
   --padding59: 59px;
 }
 
-
-
 // ===============================general style=======================================
 
 body {
@@ -212,7 +210,8 @@ ol li::before {
   }
 
   h4 {
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 40px;
   }
 
   h5 {
@@ -559,13 +558,6 @@ ol li::before {
   }
 }
 
-// .sticky {
-//   position: fixed;
-//   top: 45px;
-//   // width: 100%;
-// }
-
-
 @media (max-width: 1024px) {
   .banner {
 
@@ -583,16 +575,8 @@ ol li::before {
     display: flex;
     justify-content: end;
     gap: 32px 40px;
-    // z-index: 100000;
-    // position: relative;
-    // z-index: 2;
-    // padding: 43px;
-    // height: 50px;
   }
 }
-
-
-
 
 .services {
   position: relative;
@@ -667,7 +651,6 @@ ol li::before {
 
       h3 {
         width: 50%;
-        // max-width: 556px;
       }
 
       p {
@@ -819,7 +802,6 @@ ol li::before {
       font-weight: 600;
       font-size: 20px;
 
-
       span {
         width: 34px;
         height: 16px;
@@ -893,7 +875,6 @@ ol li::before {
     bottom: var(--padding59);
     left: -23px;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -946,7 +927,6 @@ ol li::before {
 
   .projects__slide {
     padding: 0 calc(8px + (50 - 8) * ((100vw - 320px) / (1920 - 320)));
-    ;
   }
 
   .project__img {
@@ -956,7 +936,6 @@ ol li::before {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-
   }
 
   .project__info {
@@ -985,7 +964,6 @@ ol li::before {
     .project__img {
       height: calc(388px + (700 - 388) * ((100vw - 980px) / (1920 - 980)));
       max-height: 700px;
-
     }
   }
 
@@ -1014,7 +992,6 @@ ol li::before {
     font-size: 0;
     width: 50px;
     height: 50px;
-    // background: white;
     background-color: transparent;
   }
 
@@ -1036,7 +1013,6 @@ ol li::before {
     background-repeat: no-repeat;
     background-position: center;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -1296,6 +1272,22 @@ textarea {
   .submit-btn:hover {
     scale: .9;
   }
+
+  input,
+  textarea {
+    font-size: 22px;
+  }
+
+  .styled-input label {
+    font-size: 20px;
+  }
+
+  input:focus~label,
+  textarea:focus~label,
+  input:valid~label,
+  textarea:valid~label {
+    font-size: 20px;
+  }
 }
 
 //range input
@@ -1407,11 +1399,9 @@ textarea {
   max-width: 1920px;
   width: 100%;
 
-
   .container {
     padding: 140px var(--padding59) 134px 0px;
   }
-
 
   .socials {
     display: flex;
@@ -1497,7 +1487,6 @@ textarea {
       padding: 80px 15px 20px 15px;
     }
 
-
     &__bottom {
       margin-top: 80px;
       margin-left: 0px;
@@ -1509,7 +1498,6 @@ textarea {
 
     .location::before {
       top: -10px;
-
     }
 
     &__info {
@@ -1521,14 +1509,13 @@ textarea {
       .contactUs {
         width: 100%;
         margin-top: 0px;
-
+        font-size: 24px;
       }
 
       .section__details {
         width: 100%;
       }
     }
-
   }
 }
 
@@ -1553,12 +1540,6 @@ textarea {
   }
 }
 
-@media (max-width: 1024px) {
-  // #cursor {
-  //   border: none;
-  // }
-}
-
 * {
   cursor: none;
 }
@@ -1571,7 +1552,6 @@ textarea {
   pointer-events: none;
   z-index: 1000;
   border-radius: 50%;
-
 }
 
 #cursor {
@@ -1591,9 +1571,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.02);
 
-  // transition: 0.5s scale;
   &.active {
-    //border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(28, 87, 121, 0.212);
     transform: scale(1.4);
     -webkit-transform: scale(1.4);
@@ -1623,7 +1601,7 @@ textarea {
   z-index: 3;
 }
 
-#arrowBtn.arrowActive{
+#arrowBtn.arrowActive {
   display: block;
 }
 
