@@ -13,6 +13,14 @@
 <body class="body">
   <div id="cursor"></div>
   <div id="aura"></div>
+  <div onclick="topFunction()" id="arrowBtn"></div>
+  <!-- onclick='window.scrollTo({top: 0, behavior: "smooth"});'
+      <div id="back_to_top" class="back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(270deg);" width="24" height="24"
+      viewBox="0 0 24 24">
+      <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+    </svg>
+  </div> -->
   <div class="wrapper">
     <!-- --------------------------------header------------------------------------------- -->
     <header class="header">
@@ -339,12 +347,12 @@
 
         <form action="#" class="form" id="form">
           <div class="styled-input wide">
-            <input class="_req" type="text" name="name"/>
+            <input class="_req" type="text" name="name" />
             <label>Your Name</label>
           </div>
 
           <div class="styled-input wide">
-            <input class="_req _emailPhone" type="text" name="email"/>
+            <input class="_req _emailPhone" type="text" name="email" />
             <label>Your Contact / Email or Phone with Messengers </label>
           </div>
 
@@ -353,7 +361,8 @@
             <!-- <input type="range" min="100"  max="25000" value="550" class="myRange" id="myRange"  /> -->
             <div class="range__cover">
               <div class="inputRange__cover">
-                <input type="range" value="10000" min="0" max="25000" step="10" id="myRange" class="myRange _req" name="price"/>
+                <input type="range" value="10000" min="0" max="25000" step="10" id="myRange" class="myRange _req"
+                  name="price" />
               </div>
               <p class="range__values">
                 <span id="dollar">$</span>
@@ -364,7 +373,7 @@
           </div>
 
           <div class="styled-input wide">
-            <input class="_req" type="text" name="message"/>
+            <input class="_req" type="text" name="message" />
             <label>Add text or Comment About project</label>
           </div>
 
@@ -476,6 +485,40 @@
   <script src="./scripts/linksOnScroll.js"></script>
   <script src="./scripts/validation.js"></script>
   <script src="./scripts/form.js"></script>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("arrowBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 1000 ||
+        document.documentElement.scrollTop > 1000
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      mybutton.classList.remove("arrowActive");
+    }
+
+    // $(document).ready(function () {
+    //   mybutton.click(function () {
+    //     $("html, body").animate({ scrollTop: 0 }, "slow");
+    //     return false;
+    //   });
+    // });
+  </script>
 </body>
 
 </html>

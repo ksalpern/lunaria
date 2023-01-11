@@ -56,19 +56,90 @@ gsap.to('.header', {
     //   fontSize: '50px'
     // }
   },
-
 })
-mm.add('(min-width: 980px)', () => {
+mm.add('(min-width: 981px)', () => {
   gsap.to('.header__menu', {
     scrollTrigger: {
       trigger: '.banner__links',
       start: 0,
       end: 700,
       scrub: true,
-  
+
       // toggleClass: 'fixed',
-  
+
     },
     x: '-30vw',
   })
 })
+
+// arrow 
+gsap.to('.main', {
+  scrollTrigger: {
+    trigger: '#arrowBtn',
+    start: 1000,
+    end: 1000 * 100,
+    scrub: true,
+    // toggleActions: 'restart none none none',
+    toggleClass: 'arrowActive',
+    // markers: {
+    //   fontSize: '50px'
+    // }
+  },
+})
+
+// $('#arrowBtn').on('mouseenter', (e) => {
+//   gsap.to('#arrowBtn', {
+//     y: -10,
+//     duration: 0.2,
+//     ease: 'back.inOut(3)',
+//     overwrite: 'auto'
+//   });
+// })
+// $('#arrowBtn').on('mouseleave', (e) => {
+//   gsap.to('#arrowBtn', {
+//     y: 0,
+//     duration: 0.5,
+//     ease: 'power3.out',
+//     overwrite: 'auto'
+//   });
+// })
+// $('#arrowBtn').on('click', (e) => {
+//   gsap.to(window, {
+//     scrollTo: {
+//       y: ".main"
+//     },
+//     duration: 1.5,
+//     ease: 'power1.inOut'
+//   });
+// })
+// let aa = document.getElementById('arrowBtn')
+// // console.log(aa)
+// aa.addEventListener('click', function () {
+//   this.classList.toggle('arrowActiveaaaaaaaaaaa')
+
+//   gsap.to(window, {
+//     scrollTo: innerHeight,
+//     // {
+//       // y: 0
+//       // x: 0,
+//       // toggleClass: 'arrowActiveaaaaaaaaaaa',
+//     // },
+//     duration: 1.5,
+//     ease: 'power1.inOut'
+//   });
+// })
+// $('.back-to-top').click(function () {
+//   // $('body,html').animate({
+//   //   scrollTop: 0
+//   // }, 2000);
+// });
+// console.log($('.back-to-top'))
+// $(window).scroll(function () {
+//   let scrolled = $(window).scrollTop();
+
+//   if (scrolled > 350) {
+//     $('.back-to-top').addClass('active');
+//   } else {
+//     $('.back-to-top').removeClass('active');
+//   }
+// });

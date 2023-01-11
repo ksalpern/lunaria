@@ -1340,7 +1340,41 @@ input[type=checkbox]:checked + label {
   -o-transform: scale(1.4);
 }
 
+#arrowBtn {
+  background-image: url(../assets/more.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  display: none;
+  z-index: 3;
+}
+
+#arrowBtn.arrowActive {
+  display: block;
+}
+
 #cursor.hidden.hidden,
 #aura.hidden.hidden {
   transform: scale(0.01);
+}
+
+@media (max-width: 980px) {
+  * {
+    cursor: default;
+  }
+  #cursor,
+#aura {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
