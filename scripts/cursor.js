@@ -2,8 +2,6 @@ let cx, cy, mouseX, mouseY, posX, posY, clientX, clientY, dx, dy, tiltx, tilty, 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Custom JS
-
   const body = document.querySelector('body')
 
   body.addEventListener('mousemove', e => {
@@ -16,18 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     mouseCoords(e)
     cursor.classList.remove('hidden')
     follower.classList.remove('hidden')
-
   })
 
   function updateMe() {
-
     gsap.to('.content', 1, {
       transform: `rotate3d( ${tiltx}, ${tilty}, 0, ${degree}deg )`
     })
-
   }
-
-  
 
   const cursor = document.getElementById('cursor')
   const follower = document.getElementById('aura')
@@ -36,16 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
   mouseX = 0, mouseY = 0, posX = 0, posY = 0
 
   function mouseCoords(e) {
-
     mouseX = e.pageX
     mouseY = e.pageY
-
   }
 
   gsap.to({}, .01, {
-
     repeat: -1,
-
     onRepeat: () => {
 
       posX += (mouseX - posX) / 5
@@ -64,13 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
           top: posY - 21
         }
       })
-
     }
-
   })
 
   for (let i = 0; i < links.length; i++) {
-
     links[i].addEventListener('mouseover', () => {
       cursor.classList.add('active')
       follower.classList.add('active')
@@ -80,12 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
       cursor.classList.remove('active')
       follower.classList.remove('active')
     })
-
   }
-
   body.addEventListener('mouseout', () => {
     cursor.classList.add('hidden')
     follower.classList.add('hidden')
   })
-
 })
