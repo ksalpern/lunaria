@@ -500,7 +500,7 @@ ol li::before {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1500px) {
   .header {
     padding-top: 0;
 
@@ -529,7 +529,7 @@ ol li::before {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1500px) {
   .main {
     margin-top: 204px;
   }
@@ -580,20 +580,28 @@ ol li::before {
   }
 }
 
+@media (max-width: 1500px) {
+  .banner {
+    .fixed {
+      top: 40px;
+    }
+
+    .banner__text {
+      margin-bottom: 140px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .banner {
     .container {
       padding: 0px 16px;
     }
 
-    .fixed {
-      top: 40px;
-    }
+
   }
 
-  .banner__text {
-    margin-bottom: 140px;
-  }
+
 
   .banner__links {
     top: -25px;
@@ -601,8 +609,6 @@ ol li::before {
     justify-content: end;
     gap: 32px 40px;
   }
-
-
 }
 
 .services {

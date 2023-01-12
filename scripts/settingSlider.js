@@ -33,7 +33,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     speed: 300,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 980,
