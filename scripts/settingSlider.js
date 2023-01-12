@@ -5,6 +5,8 @@ $(document).ready(function () {
     speed: 300,
     arrows: false,
     focusOnSelect: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1500,
@@ -30,6 +32,8 @@ $(document).ready(function () {
     slidesToShow: 2,
     slidesToScroll: 1,
     speed: 300,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 980,

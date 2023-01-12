@@ -132,6 +132,11 @@ ol li::before {
 .section__header h2 {
   max-width: 424px;
   width: 50%;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 .section__header .section__details {
   width: 50%;
@@ -140,6 +145,11 @@ ol li::before {
   gap: 48px 8px;
   width: 100%;
   max-width: 633px;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 .section__header .section__details button {
   background: none;
@@ -279,6 +289,11 @@ ol li::before {
   width: 100%;
   max-width: 300px;
   gap: 20px 36px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 .header .subLogo {
   width: 127px;
@@ -439,7 +454,7 @@ ol li::before {
 }
 .main {
   position: relative;
-  margin-top: 204px;
+  margin-top: 390px;
   max-width: 1920px;
   width: calc(375px + 1545 * (100vw - 375px) / 1545);
 }
@@ -448,6 +463,11 @@ ol li::before {
   padding: 0;
 }
 
+@media (max-width: 1024px) {
+  .main {
+    margin-top: 204px;
+  }
+}
 .banner {
   position: relative;
 }
@@ -479,7 +499,7 @@ ol li::before {
 .banner .fixed {
   position: fixed;
   top: 80px;
-  left: 80%;
+  left: 83%;
   transform: translateX(-30%);
   -webkit-transform: translateX(-30%);
   -moz-transform: translateX(-30%);
@@ -490,6 +510,9 @@ ol li::before {
 @media (max-width: 1024px) {
   .banner .container {
     padding: 0px 16px;
+  }
+  .banner .fixed {
+    top: 40px;
   }
   .banner__text {
     margin-bottom: 140px;
@@ -730,6 +753,11 @@ ol li::before {
   height: calc(350px + 224 * (100vw - 375px) / 1545);
   max-height: 574px;
   position: relative;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
 }
 .about .team__item::before {
   content: "";
@@ -1301,6 +1329,10 @@ textarea:valid ~ label {
   .services .redCircle {
     left: -880px;
     right: inherit;
+  }
+  .banner .fixed {
+    left: 50%;
+    transform: translateX(600px);
   }
 }
 * {
